@@ -21,7 +21,7 @@
   header{background:var(--navy);color:#fff;position:relative;overflow:hidden}
   header svg.contours{position:absolute;right:-140px;top:-120px;width:560px;height:560px;pointer-events:none}
   .hero{position:relative;padding:72px 0 80px;display:flex;flex-direction:column;gap:18px}
-  .mark{width:44px;height:44px;border:1.5px solid var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--teal)}
+  .mark{align-self:flex-start;height:44px;padding:0 12px;letter-spacing:.06em;font-size:15px;border:1.5px solid var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--teal)}
   .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
   h1{margin:0;font-size:clamp(34px,6vw,54px);line-height:1.08;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
   .lead{margin:0;font-size:19px;color:#D3DEE9;max-width:620px;text-wrap:pretty}
@@ -48,8 +48,16 @@
   .chips{display:flex;flex-wrap:wrap;gap:10px}
   .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:15px;font-weight:600;color:var(--navy)}
 
+  .chip-t{background:#EAF6F5;border-color:#C9E8E5;color:#174F4A}
+  .chips.mini{gap:6px}
+  .chips.mini .chip{padding:4px 10px;font-size:13px}
   .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
   .list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:16px}
+  .list.ticks{gap:12px;font-size:15.5px;color:var(--muted)}
+  .list.ticks li{position:relative;padding-left:22px}
+  .list.ticks li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:2px;background:var(--teal)}
+  .list.ticks strong{color:var(--navy);font-weight:700}
+  .intro{margin:-12px 0 24px;font-size:17px;color:var(--muted);max-width:680px}
 
   .contact{margin:72px 0 0;background:var(--navy);color:#fff;border-radius:20px;padding:44px 36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
   .contact h2{color:#fff;margin:0 0 8px}
@@ -73,7 +81,7 @@
     <circle cx="303" cy="286" r="5" fill="#3FB8AF" stroke="none"/>
   </svg>
   <div class="wrap hero">
-    <div class="mark" aria-hidden="true">MNNK</div>
+    <div class="mark" aria-hidden="true">MNUK</div>
     <span class="eyebrow">Data · Research · Evaluation</span>
     <h1>Mohammad Nasir Uddin Khan</h1>
     <p class="lead">Data, research and evaluation specialist with 15+ years of experience across Africa and South Asia, turning field data into clear evidence for decisions.</p>
@@ -99,34 +107,40 @@
     <h2 id="skills">What I do</h2>
     <div class="grid">
       <div class="card">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <h3>Research &amp; evaluation</h3>
+        <div class="chips mini"><span class="chip chip-t">Managing evaluations</span><span class="chip chip-t">Impact evaluation</span><span class="chip chip-t">M&amp;E system strengthening</span><span class="chip chip-t">Theory of change</span><span class="chip chip-t">Complaint &amp; feedback mechanisms</span></div>
+        <p>Designing and strengthening M&amp;E systems and managing evaluations, from evaluability and theory of change to final reporting.</p>
+      </div>
+      <div class="card">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
-        <h3>Data analysis</h3>
-        <p>Survey and monitoring data analysis, indicators and forecasting, presented as clear dashboards and reports.</p>
+        <h3>Data analysis &amp; visualisation</h3>
+        <div class="chips mini"><span class="chip chip-t">Survey analysis</span><span class="chip chip-t">Data cleaning &amp; quality control</span><span class="chip chip-t">Data visualisation</span><span class="chip chip-t">Dashboards</span><span class="chip chip-t">Indicators</span><span class="chip chip-t">Forecasting</span></div>
+        <p>Survey and monitoring data: cleaning and quality control, analysis, indicators and forecasting, turned into clear visualisations, dashboards and reports.</p>
       </div>
       <div class="card">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg>
         <h3>GIS &amp; remote sensing</h3>
+        <div class="chips mini"><span class="chip chip-t">Spatial analysis</span><span class="chip chip-t">Satellite indicators</span><span class="chip chip-t">Thematic mapping</span></div>
         <p>Spatial analysis, satellite-derived indicators and thematic mapping.</p>
-      </div>
-      <div class="card">
-        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <h3>Research &amp; evaluation</h3>
-        <p>Study design, sampling, mixed methods, M&amp;E frameworks and theory of change.</p>
-      </div>
-      <div class="card">
-        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M7 14l2.5 2.5L15 12"/></svg>
-        <h3>Project management</h3>
-        <p>Planning and delivering studies end to end: scope, timelines, budgets and coordination.</p>
       </div>
       <div class="card">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c3 0 6 1.8 6 5.5"/></svg>
         <h3>Team leadership</h3>
+        <div class="chips mini"><span class="chip chip-t">Multidisciplinary teams</span><span class="chip chip-t">Performance management</span><span class="chip chip-t">Field operations</span></div>
         <p>Leading multidisciplinary analytical and field teams.</p>
       </div>
       <div class="card">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M7 14l2.5 2.5L15 12"/></svg>
+        <h3>Strategy &amp; project management</h3>
+        <div class="chips mini"><span class="chip chip-t">Strategy development</span><span class="chip chip-t">Results-based management</span><span class="chip chip-t">Stakeholder coordination</span><span class="chip chip-t">Planning &amp; budgeting</span></div>
+        <p>Developing unit strategies for research, M&amp;E, vulnerability analysis and knowledge management, and delivering them with a results-based approach.</p>
+      </div>
+      <div class="card">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
-        <h3>Training &amp; capacity building</h3>
-        <p>Designing training and mentoring analysts and data teams.</p>
+        <h3>Capacity building &amp; knowledge management</h3>
+        <div class="chips mini"><span class="chip chip-t">Knowledge management</span><span class="chip chip-t">Lessons learned</span><span class="chip chip-t">Training design</span><span class="chip chip-t">Institutional capacity</span><span class="chip chip-t">Mentoring</span></div>
+        <p>Designing training, mentoring teams and building systems that capture and share knowledge and lessons learned across an organisation.</p>
       </div>
     </div>
   </section>
@@ -175,7 +189,7 @@
     <div>
       <div class="k">Connect</div>
       <a href="https://wa.me/8801556348309">WhatsApp: +880 1556 348309</a>
-      <a href="https://wa.me/254111414446">WhatsApp: +254 111 414446</a>
+      <a href="https://wa.me/254111414447">WhatsApp: +254 111 414447</a>
       <a href="https://www.linkedin.com/in/mohammad-nasir-uddin-khan">LinkedIn</a>
       <a href="https://github.com/KhanMNU">GitHub</a>
     </div>
