@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mohammad Nasir Uddin Khan</title>
 <meta name="description" content="Mohammad Nasir Uddin Khan — data, research and evaluation specialist. Data analysis, GIS and remote sensing, evaluation, project management, team leadership and training.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230E2A47%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Arial,sans-serif%27 font-size=%2728%27 font-weight=%27700%27 fill=%27%233FB8AF%27 text-anchor=%27middle%27%3ENK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -20,8 +21,10 @@
 
   header{background:var(--navy);color:#fff;position:relative;overflow:hidden}
   header svg.contours{position:absolute;right:-140px;top:-120px;width:560px;height:560px;pointer-events:none}
-  .hero{position:relative;padding:72px 0 80px;display:flex;flex-direction:column;gap:18px}
-  .mark{align-self:flex-start;height:44px;padding:0 12px;letter-spacing:.06em;font-size:15px;border:1.5px solid var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--teal)}
+  .hero-grid{position:relative;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:72px 24px 80px}
+  .hero{display:flex;flex-direction:column;gap:18px;min-width:0}
+  .portrait{flex:none;width:220px;height:220px;border-radius:50%;object-fit:cover;border:4px solid rgba(63,184,175,.55)}
+  @media (max-width:760px){.hero-grid{flex-direction:column-reverse;align-items:flex-start;padding-top:48px}.portrait{width:132px;height:132px}}
   .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
   h1{margin:0;font-size:clamp(34px,6vw,54px);line-height:1.08;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
   .lead{margin:0;font-size:19px;color:#D3DEE9;max-width:620px;text-wrap:pretty}
@@ -51,6 +54,13 @@
   .chip-t{background:#EAF6F5;border-color:#C9E8E5;color:#174F4A}
   .chips.mini{gap:6px}
   .chips.mini .chip{padding:4px 10px;font-size:13px}
+  .pubs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .pubs li{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .pubs .yr{flex:none;width:44px;font-weight:800;color:var(--teal-d);font-size:15px;padding-top:1px}
+  .pubs a,.pubs .t{display:block;font-weight:700;color:var(--navy);font-size:16.5px;line-height:1.45;text-decoration:none}
+  .pubs a:hover{color:var(--teal-d);text-decoration:underline}
+  .pubs .meta{display:block;margin-top:4px;font-size:14.5px;color:var(--muted)}
+  .pubs .meta b{color:var(--ink)}
   .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
   .list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:16px}
   .list.ticks{gap:12px;font-size:15.5px;color:var(--muted)}
@@ -80,22 +90,26 @@
     <path d="M302 220c38 1 64 28 66 66s-28 70-66 70-68-28-68-66 30-71 68-70z" opacity=".3"/>
     <circle cx="303" cy="286" r="5" fill="#3FB8AF" stroke="none"/>
   </svg>
-  <div class="wrap hero">
-    <div class="mark" aria-hidden="true">MNUK</div>
-    <span class="eyebrow">Data · Research · Evaluation</span>
+  <div class="wrap hero-grid">
+  <div class="hero">
+    <span class="eyebrow">Monitoring · Evaluation · Data</span>
     <h1>Mohammad Nasir Uddin Khan</h1>
-    <p class="lead">Data, research and evaluation specialist with 15+ years of experience across Africa and South Asia, turning field data into clear evidence for decisions.</p>
+    <p class="lead">Monitoring, evaluation and data specialist with 15+ years of experience across Africa and Asia, turning field data into clear evidence for decisions.</p>
     <div class="actions">
       <a class="btn btn-primary" href="#contact">Get in touch</a>
-      <a class="btn btn-ghost" href="https://github.com/KhanMNU?tab=repositories">View code on GitHub</a>
+      <a class="btn btn-ghost" href="#publications">Publications</a>
+      <a class="btn btn-ghost" href="https://github.com/KhanMNU?tab=repositories">GitHub</a>
     </div>
+  </div>
+  <!-- Photo: upload a square headshot named photo.jpg to the repository and it appears here automatically. -->
+  <img class="portrait" src="photo.jpg" alt="Portrait of Mohammad Nasir Uddin Khan" onerror="this.remove()">
   </div>
 </header>
 
 <div class="facts">
   <div class="wrap">
     <div class="fact"><strong>15+ years</strong><span>data, research and monitoring</span></div>
-    <div class="fact"><strong>6 countries</strong><span>across Africa and South Asia</span></div>
+    <div class="fact"><strong>6 countries</strong><span>across Africa and Asia</span></div>
     <div class="fact"><strong>MSS Economics</strong><span>University of Dhaka</span></div>
   </div>
 </div>
@@ -172,6 +186,28 @@
         <ul class="list">
           <li>MSS in Economics, University of Dhaka</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="publications">
+    <span class="label">Research</span>
+    <h2 id="publications">Selected publications</h2>
+    <ol class="pubs">
+      <li><span class="yr">2013</span><div><a href="https://doi.org/10.1186/1475-9276-12-22">Can community level interventions have an impact on equity and utilization of maternal health care? Evidence from rural Bangladesh</a><span class="meta">Quayyum Z, <b>Khan MNU</b>, Quayyum T, Nasreen HE, Chowdhury M, Ensor T · <i>International Journal for Equity in Health</i>, 12:22</span></div></li>
+      <li><span class="yr">2012</span><div><span class="t">Adaptation of the five nonverbal subtests of the Stanford–Binet Intelligence Scale (5th ed.) for use in urban Bangladesh</span><span class="meta">Sultana N, <b>Khan MNU</b> · <i>International Journal of Social Sciences</i>, 5(1), 46–62</span></div></li>
+      <li><span class="yr">2012</span><div><span class="t">Urban spatial growth: the case of Bangladesh</span><span class="meta">Islam S, <b>Khan MNU</b> · Book chapter in Hossain Z (ed.), <i>Bangladesh Urban Dynamics</i>, PPRC</span></div></li>
+      <li><span class="yr">2012</span><div><span class="t">Costs of providing maternal, child and newborn care: estimates from BRAC's IMNCS programme in rural Bangladesh</span><span class="meta"><b>Khan MNU</b>, Quayyum Z, et al. · BRAC Working Paper 32</span></div></li>
+      <li><span class="yr">2009</span><div><span class="t">Household costs of obtaining maternal and newborn care in rural Bangladesh: baseline survey</span><span class="meta"><b>Khan MNU</b>, Quayyum Z, et al. · BRAC Monograph 43</span></div></li>
+    </ol>
+    <div class="two" style="margin-top:22px">
+      <div class="card">
+        <h3>Evaluation report</h3>
+        <p><a href="https://www.wfp.org/publications/sierra-leone-prro-200938-evaluation">Final evaluation of PRRO 200938, Sierra Leone (2018)</a>: evaluation manager.</p>
+      </div>
+      <div class="card">
+        <h3>Also</h3>
+        <p>Two further working papers, a reliability study in the <i>Dhaka University Studies Journal</i>, and conference papers presented in the UK, Bangladesh, China and Tanzania (2010–2013).</p>
       </div>
     </div>
   </section>
