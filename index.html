@@ -61,6 +61,17 @@
   .pubs a:hover{color:var(--teal-d);text-decoration:underline}
   .pubs .meta{display:block;margin-top:4px;font-size:14.5px;color:var(--muted)}
   .pubs .meta b{color:var(--ink)}
+  .timeline{list-style:none;margin:0;padding:0;border-left:2px solid #C9E8E5;display:flex;flex-direction:column;gap:18px}
+  .timeline li{position:relative;display:flex;flex-wrap:wrap;gap:4px 24px;padding-left:24px}
+  .timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--teal);border:2px solid var(--bg)}
+  .timeline .when{flex:none;width:130px;font-weight:700;color:var(--teal-d);font-size:15px}
+  .timeline div{display:flex;flex-direction:column;min-width:240px;flex:1}
+  .timeline strong{color:var(--navy);font-size:17px}
+  .timeline div span{color:var(--muted);font-size:15px}
+  .certs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+  .certs li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+  .certs strong{color:var(--navy);font-size:16px}
+  .certs span{color:var(--muted);font-size:14.5px}
   .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
   .list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:16px}
   .list.ticks{gap:12px;font-size:15.5px;color:var(--muted)}
@@ -169,10 +180,36 @@
     </div>
   </section>
 
+  <section aria-labelledby="career">
+    <span class="label">Career</span>
+    <h2 id="career">Career at a glance</h2>
+    <ol class="timeline">
+      <li><span class="when">2014 – present</span><div><strong>World Food Programme</strong><span>Sierra Leone · Mozambique · Somalia (Nairobi-based)</span></div></li>
+      <li><span class="when">2019</span><div><strong>FAO · World Bank</strong><span>Bangladesh</span></div></li>
+      <li><span class="when">2018 – 2019</span><div><strong>ARCED Foundation</strong><span>Research Director · Bangladesh</span></div></li>
+      <li><span class="when">2008 – 2014</span><div><strong>BRAC</strong><span>Sierra Leone · Liberia · Bangladesh</span></div></li>
+      <li><span class="when">2007 – 2008</span><div><strong>Bangladesh Institute of Development Studies · BRAC University</strong><span>Bangladesh</span></div></li>
+    </ol>
+  </section>
+
   <section aria-labelledby="background">
     <span class="label">Background</span>
-    <h2 id="background">Experience &amp; education</h2>
-    <div class="two">
+    <h2 id="background">Education, languages &amp; reach</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Education</h3>
+        <ul class="list">
+          <li>MSS in Economics, University of Dhaka</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Languages</h3>
+        <ul class="list">
+          <li>Bangla: native</li>
+          <li>English: professional</li>
+          <li>Arabic: elementary</li>
+        </ul>
+      </div>
       <div class="card">
         <h3>Countries worked in</h3>
         <ul class="list">
@@ -181,18 +218,25 @@
           <li>Bangladesh</li>
         </ul>
       </div>
-      <div class="card">
-        <h3>Education</h3>
-        <ul class="list">
-          <li>MSS in Economics, University of Dhaka</li>
-        </ul>
-      </div>
     </div>
+  </section>
+
+  <section aria-labelledby="certifications">
+    <span class="label">Credentials</span>
+    <h2 id="certifications">Certifications</h2>
+    <ul class="certs">
+      <li><strong>Evaluability Assessment</strong><span>UN System Staff College · 2025</span></li>
+      <li><strong>Theory-Based Approaches to Evaluation</strong><span>UN System Staff College · 2024</span></li>
+      <li><strong>Theories of Change</strong><span>UN System Staff College · 2024</span></li>
+      <li><strong>Evaluation Fundamentals Certification Programme</strong><span>ITCILO · 2023</span></li>
+      <li><strong>Google Data Analytics Certificate</strong><span>Google / Coursera · 2021</span></li>
+    </ul>
   </section>
 
   <section aria-labelledby="publications">
     <span class="label">Research</span>
     <h2 id="publications">Selected publications</h2>
+    <p class="intro">Including collaborative research with the University of Aberdeen and UC Berkeley.</p>
     <ol class="pubs">
       <li><span class="yr">2013</span><div><a href="https://doi.org/10.1186/1475-9276-12-22">Can community level interventions have an impact on equity and utilization of maternal health care? Evidence from rural Bangladesh</a><span class="meta">Quayyum Z, <b>Khan MNU</b>, Quayyum T, Nasreen HE, Chowdhury M, Ensor T · <i>International Journal for Equity in Health</i>, 12:22</span></div></li>
       <li><span class="yr">2012</span><div><span class="t">Adaptation of the five nonverbal subtests of the Stanford–Binet Intelligence Scale (5th ed.) for use in urban Bangladesh</span><span class="meta">Sultana N, <b>Khan MNU</b> · <i>International Journal of Social Sciences</i>, 5(1), 46–62</span></div></li>
